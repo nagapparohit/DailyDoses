@@ -77,6 +77,8 @@ DI in spring framework ?
                            |---> spring container|-----> fully confgigurable system 
 -------------> meta config |                     |
 
+POJO and meta info is cosumed by spring container in order to produce fully config system for us. during config of our application spring produces intermeditaee
+which are called beans from pojo and meta info
 
 
 
