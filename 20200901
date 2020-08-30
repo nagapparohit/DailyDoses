@@ -64,3 +64,22 @@ As a foundation we have spring continer core modules:
 
 basiscally we have impleentaiton of depdency injection container .
 
+
+----------------------------------------------------WIRE BEANS--------------------------------------------------------
+How spring framework wires beans together ?
+setting up spring frame workd ?
+spring bean life cycle ?
+spring bean scope ?
+DI in spring framework ?
+
+
+----> pojo business objects|                     |
+                           |---> spring container|-----> fully confgigurable system 
+-------------> meta config |                     |
+
+
+
+
+
+
+
