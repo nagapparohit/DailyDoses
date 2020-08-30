@@ -6,4 +6,26 @@ familiar with spring related reactive capabilities
 implement fully reactive web application
 ----------------------------------------------------
 what is spring framework ?
-dependency injection and IOC are pattern which are foundation of spring framework
+dependency injection and IOC are pattern which are foundation of spring framework.
+
+jdk8 + jee 7 + baseline no backward compatibility of java 7
+
+reactive support
+kotlin support 
+all avail in spring 5.
+--------------------------------------------------
+As a foundation we have spring continer core modules:
+  -->Beans
+  -->Core
+  -->Context 
+  -->Spel ( spring expression language)
+  above framework provide core functionalities like dependency injection , wiring beans etc etc
+  on top of the above module we have modules which provide extras capabilites to spring like AOP , Aspect  , Instrumentation , messaging 
+  on top of above we have Web group of moduble which inclue servlet , websocket etc
+  and we have Data Access/Interagtion modules like ORM , JDBC, OXM, JMS, Transactions etc.
+  --> we have Test Module also test our souce codes
+ --------------------------------------------------------
+ dependecy injectiona and ioc pattern
+ 
+ the aim of ioc pattern is to provide formalized means to compose application component in simple words its all about remmoving dependency from our source code and make our 
+ application loosely coupled , extendable and maintable.
