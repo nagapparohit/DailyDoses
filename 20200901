@@ -1,9 +1,9 @@
 have started learning spring 5.0
 
 spring provides different ways to access data
-
 to understand how AOP works
-
 familiar with spring related reactive capabilities
-
 implement fully reactive web application
+----------------------------------------------------
+what is spring framework ?
+dependency injection and IOC are pattern which are foundation of spring framework
