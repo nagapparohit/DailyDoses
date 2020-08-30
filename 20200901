@@ -80,6 +80,13 @@ DI in spring framework ?
 POJO and meta info is cosumed by spring container in order to produce fully config system for us. during config of our application spring produces intermeditaee
 which are called beans from pojo and meta info
 
+spring beans: defintion and its serveral charateristics
+--> a package qualified classname . this is a class from which bean is created.
+--> bean behiavoural configuration elements
+--> bean depeencies  (its most useful as here we definerd depenidices to our bean and spring framework will provide us)
+--> other config setting like databse setting n all.
+
+
 
 
 
