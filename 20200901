@@ -29,3 +29,38 @@ As a foundation we have spring continer core modules:
  
  the aim of ioc pattern is to provide formalized means to compose application component in simple words its all about remmoving dependency from our source code and make our 
  application loosely coupled , extendable and maintable.
+ --------------------------------------------------------
+ public class DependencyInjection {
+
+	static class Dependency{
+		String doWork() {
+			return "work is done";
+		}
+		
+	}
+	static class Injected{
+		private Dependency dependency;
+		
+		public Injected(Dependency dependency) {
+			this.dependency = dependency;
+		}
+		
+		void delegate() {
+			System.out.println(dependency.doWork());
+		}
+	}	
+	public static void main(String[] args) {
+    /**
+    *This is what actually spring does it just instansiate our classes and wire them together,
+    */
+		Injected injected = new Injected(new Dependency());
+		
+    /**
+    *This part is actually our application logic , so basically after our application was wired from different classes , now it can execute some bussines login 
+    */
+		injected.delegate();
+	}
+}
+
+basiscally we have impleentaiton of depdency injection container .
+
