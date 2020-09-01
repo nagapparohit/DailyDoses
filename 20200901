@@ -127,6 +127,13 @@ etc
 The InternalResourceViewResolver will have rules defined to resolve the view names. As per the above defined rule, a logical view named hello is delegated to a view implementation located 
 at /WEB-INF/jsp/hello.jsp 
 
+--------------------------------------------------------------------------------------
+different type of mapping are avail in hibernate which you can use to desing database base on you application need.
+inheritance
+association
+collection
+component
+
 
 
   
