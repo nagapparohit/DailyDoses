@@ -1,0 +1,14 @@
+Today i have learnt concet of one to many annotation in hibernate/JPA api
+suppoer we have 1 teacher object and 1 subject 
+like
+class Teacher{
+
+  @onetoMany
+  Collection<Subject> subject; // here it mean 1 teacher can teach many subjects so if 1 teacher can teach math , sci , social but here what acutally means is if 
+  1 teacher can teach maths other teach cannot teach math that will give foreign key vialtion in db
+}
+
+class Subjec{
+
+}
+
