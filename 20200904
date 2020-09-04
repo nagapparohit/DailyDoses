@@ -44,3 +44,15 @@ Player p = session.get(Player.class,1) // let say we wwant first record so we gi
 session.delete(p);
 transacion.commit();
 session.close()
+
+
+//While saving if we want to auto generated a value we can give annotation GeneratedValue(staregry=GenetatyepType.IDENTY) in class defintion
+@ID
+@GeneratedValue(strategy=GenerationType.IDENTITY)
+private id;
+
+//now if we save 
+p1=new Persn("ewqe",10);
+session.save(p1)
+transacation.commit();
+session.close();
