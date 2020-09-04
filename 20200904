@@ -16,3 +16,9 @@ its one way of querying the db in hibernate
 it can be used for DML operations
 creteria api is an object oriented after native for HQL to read data from database.
 cretiean api support compile time checking the querying that we build unlike the HQL
+
+one's session is created using session factory 
+we can  begin ttranscation using sesssion.benginTranzsaction()
+session.svae(oabjec)
+transcation.commit();
+session.close()
