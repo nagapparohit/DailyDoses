@@ -61,3 +61,5 @@ session.close();
 @Columne(nullable=false,name="col name in db")
 privat rollno
 
+//wiht HOL we cannot perform Create opertion we can only perform read update and delete opertion 
+
