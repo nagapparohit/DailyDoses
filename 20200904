@@ -1,0 +1,10 @@
+Hibernate support CRUD operations by session interface
+
+1.Multiple persistence object's cannot be reterived
+2.Multiple update and delete operations are not possible
+3. Required criterion can't be expressed to perform some complex CRUD Operation
+
+To overome abover limitation we have:
+HQL
+criterina api
+Native SQL
