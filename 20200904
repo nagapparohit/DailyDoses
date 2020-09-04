@@ -70,3 +70,8 @@ getReturnType() --> return the hibernate type of the query resutl
 interate() --> return the query result as an iterator
 list() --> return teh query result as an list
 
+
+String hqlquery = " from stock s where s.stockcode = :stockcode"
+List result = session.createQuery(hql).setParameret("stockcode","1111").list()
+
+
