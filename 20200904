@@ -56,3 +56,8 @@ p1=new Persn("ewqe",10);
 session.save(p1)
 transacation.commit();
 session.close();
+
+//if you don not want null value to stored in you can set 
+@Columne(nullable=false,name="col name in db")
+privat rollno
+
