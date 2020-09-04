@@ -19,6 +19,28 @@ cretiean api support compile time checking the querying that we build unlike the
 
 one's session is created using session factory 
 we can  begin ttranscation using sesssion.benginTranzsaction()
-session.svae(oabjec)
+//CREATE A RECORD
+object = new Person();
+session.save(oabject)
 transcation.commit();
+session.close()
+
+//READ/GET a RECORD
+so if we want to retrieve a record
+Player p = session.get(Player.class,1) // let say we wwant first record so we give key as 1
+transacion.commit();
+session.close()
+
+//UPDATE A RECORD
+to update a record we just need to use set method after getting a record
+Player p = session.get(Player.class,1) // let say we wwant first record so we give key as 1
+p.setName("anas")
+transacion.commit();
+session.close()
+
+//DELETE A RECORD
+now suppose uou want to delete a record for that we just need to use session.delete after getting a record
+Player p = session.get(Player.class,1) // let say we wwant first record so we give key as 1
+session.delete(p);
+transacion.commit();
 session.close()
