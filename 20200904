@@ -8,3 +8,11 @@ To overome abover limitation we have:
 HQL
 criterina api
 Native SQL
+
+HQL is defined by hibernal , it doenot depend on the table of the database , it depend upon the classes.
+
+cretieria api
+its one way of querying the db in hibernate 
+it can be used for DML operations
+creteria api is an object oriented after native for HQL to read data from database.
+cretiean api support compile time checking the querying that we build unlike the HQL
