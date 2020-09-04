@@ -61,5 +61,12 @@ session.close();
 @Columne(nullable=false,name="col name in db")
 privat rollno
 
-//wiht HOL we cannot perform Create opertion we can only perform read update and delete opertion 
+//wiht HOL we cannot perform Create opertion we can only perform read update and delete opertion ,
+once you get the session object from the session factory 
+you can do
+session.createQuery("wrtie you HQL query herer")
+methos we can user are 
+getReturnType() --> return the hibernate type of the query resutl
+interate() --> return the query result as an iterator
+list() --> return teh query result as an list
 
