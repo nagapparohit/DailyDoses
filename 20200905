@@ -1,0 +1,6 @@
+today we have learn that session manangement done with cookes
+we canne delete the cooked we need to set the cookey new value to blank and set its age to 0
+
+cooke.set("id","")
+cookie.setAge(o);
+respose.addCooke(c1)
