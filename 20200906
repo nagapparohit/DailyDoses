@@ -1,0 +1,16 @@
+there are thinf called DAO pattern which is used to access database ojebce
+1.firs create interface of entity
+interface personDao{
+  List<person> getAllpeso()p
+}
+2. impletment abover interface
+personDaoimpl implements persaonDao{
+    
+    List<person> getallperso(){
+      //return person list
+    }
+
+}
+
+3. user personDaoimp object
+new personDaoImlp().getAllPerson();
