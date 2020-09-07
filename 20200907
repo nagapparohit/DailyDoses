@@ -1,0 +1,2 @@
+#to get the info of cols in table in postgres we have table columns we can use below query
+SELECT * FROM information_schema.columns WHERE table_schema='public' AND table_name   = 'camp_run_stats_period' 
