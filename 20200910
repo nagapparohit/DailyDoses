@@ -41,3 +41,8 @@ After the JVM requests for the class, a few steps are to be followed in order to
 3.findClass(String name): This method is used to find a specified class. This method only finds but doesn’t load the class.
 4.findLoadedClass(String name): This method is used to verify whether the Class referenced by the JVM was previously loaded or not.
 5.Class.forName(String name, boolean initialize, ClassLoader loader): This method is used to load the class as well as initialize the class. This method also gives the option to choose any one of the ClassLoaders. If the ClassLoader parameter is NULL then Bootstrap ClassLoader is used.
+
+
+
+batch understanding  in hibernate
+https://stackoverflow.com/questions/6687422/hibernate-batch-size-confusion
