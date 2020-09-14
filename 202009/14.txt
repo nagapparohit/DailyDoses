@@ -1,7 +1,15 @@
+
+SMART RSA API --> done ,1281-->done,1294 --> not picked --> 1387 --> (client issue in progress)
+
+above are previous issues
+
 update primetel(cyprus) and inwi(Morocco) tickets to verified state --> pending
 Start dialog(sri lanka) block list issue MC-1422 --> pending
 
 reproducing inwi cg offers not generated issue with old jars(26 aug 2020) from jenkins --> done
+
+new ticket assigned by harsha MC-1457
+
 
 2020-09-14 11:53:55,864 INFO [pool-5-thread-3] (USSDListener.java:55) - Session:->5fa0f48b, Delivered Short Message: Hello from SMPPSim, Send To:null
 2020-09-14 11:54:28,582 INFO [pool-5-thread-1] (USSDListener.java:55) - Session:->5fa0f48b, Delivered Short Message: *9897*9800012922#, Send To:9897
@@ -57,4 +65,211 @@ int product = requestObject.getOfferQueryRequest().getProduct();
 
 
 MC-1422(only client side changes) (features/familylevel_globalPolicy) told anisha to merge on releases/v5.0.1 branch
+
+
+
+HibenateClient properties issues (path was not correct)
+INFO: HHH000401: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:postgresql://10.74.2.115:5432/mviva_5]
+Sep 14, 2020 3:03:10 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {user=ncell, password=****, autocommit=false}
+Exception in thread "main" java.lang.ExceptionInInitializerError
+at com.kivar.lumina.common.hibernate.util.BasicHibernateUtil.initSessionFactory(BasicHibernateUtil.java:45)
+at com.kivar.lumina.common.hibernate.util.DBPwdEncryptionHibernateUtil.getInstance(DBPwdEncryptionHibernateUtil.java:37)
+at com.kivar.lumina.dbcommon.hibernate.util.DBCommonHibernateUtil.getUtil(DBCommonHibernateUtil.java:9)
+at com.kivar.lumina.dbcommon.context.ContextDBHelper.getDateFormatFromConfig(ContextDBHelper.java:26)
+at com.kivar.lumina.dbcommon.context.ContextDBHelper.<clinit>(ContextDBHelper.java:22)
+at com.kivar.lumina.dbcommon.context.RefreshingLuminaGlobalContext.getContextFromStore(RefreshingLuminaGlobalContext.java:92)
+at com.kivar.lumina.dbcommon.context.RefreshingLuminaGlobalContext.setOrResetContext(RefreshingLuminaGlobalContext.java:134)
+at com.kivar.lumina.dbcommon.context.RefreshingLuminaGlobalContext.<init>(RefreshingLuminaGlobalContext.java:41)
+at com.kivar.lumina.dbcommon.context.RefreshingLuminaGlobalContext.getInstance(RefreshingLuminaGlobalContext.java:34)
+at com.pelatro.mviva.vaultdoor.deploy.VaultDoorMainTools.getContext(VaultDoorMainTools.java:140)
+at com.pelatro.mviva.vaultdoor.deploy.VaultDoorMainTools.buildMemoryBackedVault(VaultDoorMainTools.java:101)
+at com.pelatro.mviva.vaultdoor.deploy.VaultDoorMainTools.init(VaultDoorMainTools.java:74)
+at com.pelatro.mviva.vaultdoor.deploy.VaultMainDoor.main(VaultMainDoor.java:72)
+Caused by: java.lang.NullPointerException
+at org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:214)
+at org.hibernate.engine.jdbc.internal.JdbcServicesImpl$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcServicesImpl.java:242)
+at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:117)
+at org.hibernate.service.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:75)
+at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:159)
+at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:131)
+at org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:78)
+at org.hibernate.cfg.Configuration.buildSettingsInternal(Configuration.java:2293)
+at org.hibernate.cfg.Configuration.buildSettings(Configuration.java:2289)
+at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1758)
+at com.kivar.lumina.common.hibernate.util.BasicHibernateUtil.createSessionFactory(BasicHibernateUtil.java:51)
+at com.kivar.lumina.common.hibernate.util.BasicHibernateUtil.initSessionFactory(BasicHibernateUtil.java:41)
+
+
+1=/home/rohit/product_configs/config/common/common_configs.properties,/home/rohit/product_configs/config/common/client_hibernate_config.properties,/home/rohit/product_configs/config/entity_specific/sub_configs.properties,/home/rohit/product_configs/config/config_sub/naksha-config.properties,/home/rohit/product_configs/config/common/imei.properties
+2=/home/rohit/product_configs/config/common/common_configs.properties,/home/rohit/product_configs/config/common/client_hibernate_config.properties,/home/rohit/product_configs/config/entity_specific/ret_configs.properties,/home/rohit/product_configs/config/config_sub/naksha-config.properties,/home/rohit/product_configs/config/common/imei.properties
+
+
+_DHRUVA_CUBE_1000_20200701_20200731
+_DHRUVA_CUBE_1000_20200501_20200531
+_DHRUVA_CUBE_1000_20200601_20200630
+
+
+insert into values (1982,'_DHRUVA_CUBE_1000_20200501_20200531',2,1000,'2020-05-01 00:00:00','2020-05-31 23:59:59.999',0,1594069200000,1)
+insert into values (1983,'_DHRUVA_CUBE_1000_20200601_20200630',2,1000,'2020-06-01 00:00:00','2020-06-30 23:59:59.999',0,1594674000000,1)
+insert into values (1984,'_DHRUVA_CUBE_1000_20200701_20200731',2,1000,'2020-07-01 00:00:00','2020-07-31 23:59:59.999',0,1595278800000,1)
+
+
+1982;"_DHRUVA_CUBE_1000_20200701_20200707";2;1000;"2020-07-01 00:00:00";"2020-07-07 23:59:59.999";0;1594069200000;1
+1983;"_DHRUVA_CUBE_1000_20200708_20200714";2;1000;"2020-07-08 00:00:00";"2020-07-14 23:59:59.999";0;1594674000000;1
+1984;"_DHRUVA_CUBE_1000_20200715_20200721";2;1000;"2020-07-15 00:00:00";"2020-07-21 23:59:59.999";0;1595278800000;1
+1985;"_DHRUVA_CUBE_1000_20200722_20200728";2;1000;"2020-07-22 00:00:00";"2020-07-28 23:59:59.999";0;1595883600000;1
+1986;"_DHRUVA_CUBE_1000_20200729_20200804";2;1000;"2020-07-29 00:00:00";"2020-08-04 23:59:59.999";0;1596488400000;1
+1987;"_DHRUVA_CUBE_1000_20200805_20200811";2;1000;"2020-08-05 00:00:00";"2020-08-11 23:59:59.999";0;1597093200000;1
+2322;"_DHRUVA_CUBE_1000_20200812_20200818";2;1000;"2020-08-12 00:00:00";"2020-08-18 23:59:59.999";0;1597698000000;1
+2347;"_DHRUVA_CUBE_1000_20200819_20200825";2;1000;"2020-08-19 00:00:00";"2020-08-25 23:59:59.999";0;1598302800000;1
+
+run pca monthly report
+hadoop jar /home/rohit/jars/popeye-5.1.0.6.jar com.kivar.lumina.summarization.deploy.SummarizerMain 40 1593541800000 2 3 1 /home/rohit/product_configs/config/job_configs/sub_data_load.properties
+
+
+
+
+
+
+
+Sep 14, 2020 6:42:48 PM com.google.web.bindery.requestfactory.server.RequestFactoryServlet doPost
+SEVERE: Unexpected error
+com.google.web.bindery.requestfactory.server.UnexpectedException: No RequestContext for operation ySKtc6npSj87cH36VJKLvv7QUGY=
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.die(ServiceLayerDecorator.java:216)
+	at com.google.web.bindery.requestfactory.server.ResolverServiceLayer.resolveRequestContext(ResolverServiceLayer.java:149)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.resolveRequestContext(ServiceLayerDecorator.java:162)
+	at com.google.web.bindery.requestfactory.server.FindServiceLayer.resolveRequestContext(FindServiceLayer.java:54)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.resolveRequestContext(ServiceLayerDecorator.java:162)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.resolveRequestContext(ServiceLayerDecorator.java:162)
+	at sun.reflect.GeneratedMethodAccessor452.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerCache.getOrCache(ServiceLayerCache.java:232)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerCache.resolveRequestContext(ServiceLayerCache.java:186)
+	at com.google.web.bindery.requestfactory.server.ResolverServiceLayer.resolveRequestContextMethod(ResolverServiceLayer.java:156)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.resolveRequestContextMethod(ServiceLayerDecorator.java:167)
+	at com.google.web.bindery.requestfactory.server.FindServiceLayer.resolveRequestContextMethod(FindServiceLayer.java:70)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.resolveRequestContextMethod(ServiceLayerDecorator.java:167)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.resolveRequestContextMethod(ServiceLayerDecorator.java:167)
+	at sun.reflect.GeneratedMethodAccessor451.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerCache.getOrCache(ServiceLayerCache.java:232)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerCache.resolveRequestContextMethod(ServiceLayerCache.java:192)
+	at com.google.web.bindery.requestfactory.server.SimpleRequestProcessor.processInvocationMessages(SimpleRequestProcessor.java:442)
+	at com.google.web.bindery.requestfactory.server.SimpleRequestProcessor.process(SimpleRequestProcessor.java:233)
+	at com.google.web.bindery.requestfactory.server.SimpleRequestProcessor.process(SimpleRequestProcessor.java:135)
+	at com.google.web.bindery.requestfactory.server.RequestFactoryServlet.doPost(RequestFactoryServlet.java:135)
+	at com.kivar.lumina.server.LuminaRequestFactoryServlet.doPost(LuminaRequestFactoryServlet.java:100)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:650)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.kivar.lumina.server.security.filters.XSRFTokenValidationFilter.doFilter(XSRFTokenValidationFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.kivar.lumina.server.security.filters.SessionValidationFilter.doFilter(SessionValidationFilter.java:140)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.kivar.lumina.server.security.filters.AnotherLicenseValidationFilter.doFilter(AnotherLicenseValidationFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:218)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:506)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:962)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1115)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+Sep 14, 2020 6:42:48 PM com.google.web.bindery.requestfactory.server.RequestFactoryServlet doPost
+SEVERE: Unexpected error
+com.google.web.bindery.requestfactory.server.UnexpectedException: No RequestContext for operation AQnJuRkTWnxri02KDywDz3mZ$oE=
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.die(ServiceLayerDecorator.java:216)
+	at com.google.web.bindery.requestfactory.server.ResolverServiceLayer.resolveRequestContext(ResolverServiceLayer.java:149)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.resolveRequestContext(ServiceLayerDecorator.java:162)
+	at com.google.web.bindery.requestfactory.server.FindServiceLayer.resolveRequestContext(FindServiceLayer.java:54)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.resolveRequestContext(ServiceLayerDecorator.java:162)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.resolveRequestContext(ServiceLayerDecorator.java:162)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerCache.getOrCache(ServiceLayerCache.java:232)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerCache.resolveRequestContext(ServiceLayerCache.java:186)
+	at com.google.web.bindery.requestfactory.server.ResolverServiceLayer.resolveRequestContextMethod(ResolverServiceLayer.java:156)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.resolveRequestContextMethod(ServiceLayerDecorator.java:167)
+	at com.google.web.bindery.requestfactory.server.FindServiceLayer.resolveRequestContextMethod(FindServiceLayer.java:70)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.resolveRequestContextMethod(ServiceLayerDecorator.java:167)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.resolveRequestContextMethod(ServiceLayerDecorator.java:167)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerCache.getOrCache(ServiceLayerCache.java:232)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerCache.resolveRequestContextMethod(ServiceLayerCache.java:192)
+	at com.google.web.bindery.requestfactory.server.SimpleRequestProcessor.processInvocationMessages(SimpleRequestProcessor.java:442)
+	at com.google.web.bindery.requestfactory.server.SimpleRequestProcessor.process(SimpleRequestProcessor.java:233)
+	at com.google.web.bindery.requestfactory.server.SimpleRequestProcessor.process(SimpleRequestProcessor.java:135)
+	at com.google.web.bindery.requestfactory.server.RequestFactoryServlet.doPost(RequestFactoryServlet.java:135)
+	at com.kivar.lumina.server.LuminaRequestFactoryServlet.doPost(LuminaRequestFactoryServlet.java:100)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:650)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.kivar.lumina.server.security.filters.XSRFTokenValidationFilter.doFilter(XSRFTokenValidationFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.kivar.lumina.server.security.filters.SessionValidationFilter.doFilter(SessionValidationFilter.java:140)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.kivar.lumina.server.security.filters.AnotherLicenseValidationFilter.doFilter(AnotherLicenseValidationFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:218)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:506)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:962)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1115)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+20200914 18:42:53.925 [http-bio-8105-exec-8] INFO  com.pelatro.registry.SelfCleaningGenericThreadSafeRegistry - No cleanup time for cleaning Stores configured. Setting to default of 30 Mins.
+20200914 18:43:08.555 [http-bio-8105-exec-1] INFO  com.kivar.lumina.server.campaign.CampaignsServiceImpl - [ USER = 2014 (Administrator) ] Time taken (Millies) to load campaign metadatat: 2079
+
+
+DB seeding for block list msg
+insert into source_type  values (1835,'DND Message',1,0,1);
+
+insert into configuration_details values (1049,1049,1835,1,'None','',null,0,1,'2020-09-03 10:01:03.403',1,1,'2020-09-03 10:01:03.403',1);
+
+i was already having 1049 so i replaced it with below
+insert into configuration_details values (2687,2687,1835,1,'None','',null,0,1,'2020-09-03 10:01:03.403',1,1,'2020-09-03 10:01:03.403',1);
+
+
+update configuration_details  set is_default  =1 where id =2689
+
 
