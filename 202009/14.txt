@@ -1,0 +1,60 @@
+update primetel(cyprus) and inwi(Morocco) tickets to verified state --> pending
+Start dialog(sri lanka) block list issue MC-1422 --> pending
+
+reproducing inwi cg offers not generated issue with old jars(26 aug 2020) from jenkins --> done
+
+2020-09-14 11:53:55,864 INFO [pool-5-thread-3] (USSDListener.java:55) - Session:->5fa0f48b, Delivered Short Message: Hello from SMPPSim, Send To:null
+2020-09-14 11:54:28,582 INFO [pool-5-thread-1] (USSDListener.java:55) - Session:->5fa0f48b, Delivered Short Message: *9897*9800012922#, Send To:9897
+2020-09-14 11:54:28,584 INFO [pool-5-thread-1] (USSDListener.java:78) - Received Plant Retailer Request
+2020-09-14 11:54:28,587 INFO [pool-5-thread-1] (PlantRetailerEvent.java:45) - Created Plant Retailer Event
+2020-09-14 11:54:28,587 INFO [pool-5-thread-1] (PlantRetailerEvent.java:51) - Session:->5fa0f48b, Plant Subscriber starts at:47596696287730436
+2020-09-14 11:54:28,588 DEBUG [pool-5-thread-1] (RetailerDBLookup.java:37) - Fetching RetailerID for MSISDN:9779800012920
+2020-09-14 11:54:28,621 DEBUG [pool-5-thread-1] (SubscriberDBLookup.java:37) - Fetching SubscriberID for MSISDN:9779800012922
+2020-09-14 11:54:29,274 INFO [up-thread-1] (QueryFragment.java:30) - Executing Query Fragment
+2020-09-14 11:54:29,275 DEBUG [up-thread-1] (VikramaRelay.java:116) - 9800012920_20200914115428 (21185201) -> Querying
+
+
+20200914 11:45:40.844 [WARN ] VikramaQueryRequestHandler[nioEventLoopGroup-3-2] Something went wrong while processing incoming request
+java.lang.NullPointerException
+at com.pelatro.vikrama.server.components.vikrama.handlers.VikramaQueryRequestHandler.processRequest(VikramaQueryRequestHandler.java:112) [vikrama-5.1.jar:?]
+at com.pelatro.vikrama.server.components.vikrama.handlers.VikramaQueryRequestHandler.processRequest(VikramaQueryRequestHandler.java:38) [vikrama-5.1.jar:?]
+at com.pelatro.vikrama.server.components.handlers.QueryRequestHandler.channelRead0(QueryRequestHandler.java:21) [vikrama-5.1.jar:?]
+at com.pelatro.vikrama.server.components.handlers.QueryRequestHandler.channelRead0(QueryRequestHandler.java:10) [vikrama-5.1.jar:?]
+at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:105) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:356) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:342) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:335) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:108) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:356) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:342) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:335) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:356) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:342) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:335) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:312) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:286) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:356) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:342) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:335) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1302) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:356) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:342) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:646) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:581) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:498) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:460) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138) [netty-all-4.0.50.Final.jar:4.0.50.Final]
+at java.lang.Thread.run(Thread.java:748) [?:1.8.0_211]
+
+Request coming to vikrama from ussd upstream below field were missing
+int ownerLevel = requestObject.getOfferQueryRequest().getOwnerLevel();
+int beneficiaryLevel = requestObject.getOfferQueryRequest().getBeneficiaryLevel();
+int product = requestObject.getOfferQueryRequest().getProduct();
+
+
+MC-1422(only client side changes) (features/familylevel_globalPolicy) told anisha to merge on releases/v5.0.1 branch
+
