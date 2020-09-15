@@ -1,0 +1,34 @@
+update ticket jira status pending
+
+new ticket assigned by harsha MC-1457 --> cRM issue
+
+need to check anisha ticket 5.0.1 re build issue dnd msg update in client
+
+1387 --> jira update done (pca monthly report in 5.1.0.6 branch primetel)
+1294 --> jira update done (cg subs not generating in inwi )
+
+1281 --> jira already updated cg refersh feature on 5.1.0.6 branch primetel
+
+1475 --> vijay commented something need to take check this
+
+DB seeding for block list msg
+insert into source_type  values (1835,'DND Message',1,0,1);
+
+insert into configuration_details values (1049,1049,1835,1,'None','',null,0,1,'2020-09-03 10:01:03.403',1,1,'2020-09-03 10:01:03.403',1);
+
+i was already having 1049 so i replaced it with below
+insert into configuration_details values (2687,2687,1835,1,'None','',null,0,1,'2020-09-03 10:01:03.403',1,1,'2020-09-03 10:01:03.403',1);
+
+
+update configuration_details  set is_default=1 where id =2689
+
+insert into configuration_details values (1049,1049,1835,1,'None','',null,0,1,'2020-09-03 10:01:03.403',1,1,'2020-09-03 10:01:03.403',1);
+
+insert into configuration_details values (2687,2687,1835,1,'None','',null,0,1,'2020-09-03 10:01:03.403',1,1,'2020-09-03 10:01:03.403',1);
+
+delete from configuration_details  where id=2687
+
+insert into configuration_details values (2687,2687,1835,1,'None','',null,0,1,'2020-09-15 10:01:03.403',1,1,'2020-09-15 10:01:03.403',1);
+
+
+checking dnd msg in trigger campaign
