@@ -1,0 +1,127 @@
+MC-1457 --> cRM issue  need to check in dialog
+
+need to update 1422 in jira ticket
+
+
+20200916 11:30:47.697 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/p/parag.index
+20200916 11:30:47.698 [[ WARN] MyParagFileRegistry [main]] parag dir p could not be initialized
+20200916 11:30:47.819 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/o/parag.index
+20200916 11:30:47.819 [[ WARN] MyParagFileRegistry [main]] parag dir o could not be initialized
+20200916 11:30:47.844 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/r/parag.index
+20200916 11:30:47.854 [[ WARN] MyParagFileRegistry [main]] parag dir r could not be initialized
+20200916 11:30:47.863 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/b/parag.index
+20200916 11:30:47.870 [[ WARN] MyParagFileRegistry [main]] parag dir b could not be initialized
+20200916 11:30:47.887 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/io/parag.index
+20200916 11:30:47.887 [[ WARN] MyParagFileRegistry [main]] parag dir io could not be initialized
+20200916 11:30:47.897 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/ds/parag.index
+20200916 11:30:47.898 [[ WARN] MyParagFileRegistry [main]] parag dir ds could not be initialized
+20200916 11:30:47.914 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/eo/parag.index
+20200916 11:30:47.914 [[ WARN] MyParagFileRegistry [main]] parag dir eo could not be initialized
+20200916 11:30:47.931 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/p2a/parag.index
+20200916 11:30:47.932 [[ WARN] MyParagFileRegistry [main]] parag dir p2a could not be initialized
+20200916 11:30:48.105 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/p/parag.index
+20200916 11:30:48.106 [[ WARN] MyParagFileRegistry [main]] parag dir p could not be initialized
+20200916 11:30:48.115 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/o/parag.index
+20200916 11:30:48.130 [[ WARN] MyParagFileRegistry [main]] parag dir o could not be initialized
+20200916 11:30:48.148 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/r/parag.index
+20200916 11:30:48.151 [[ WARN] MyParagFileRegistry [main]] parag dir r could not be initialized
+20200916 11:30:48.168 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/b/parag.index
+20200916 11:30:48.169 [[ WARN] MyParagFileRegistry [main]] parag dir b could not be initialized
+20200916 11:30:48.192 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/io/parag.index
+20200916 11:30:48.203 [[ WARN] MyParagFileRegistry [main]] parag dir io could not be initialized
+20200916 11:30:48.215 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/ds/parag.index
+20200916 11:30:48.216 [[ WARN] MyParagFileRegistry [main]] parag dir ds could not be initialized
+20200916 11:30:48.235 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/eo/parag.index
+20200916 11:30:48.235 [[ WARN] MyParagFileRegistry [main]] parag dir eo could not be initialized
+20200916 11:30:48.275 [[FATAL] MyConstrainedParagBootLoader [main]] unable to boot index from /home/rohit/product_configs/parag_store/1598270792658/p2a/parag.index
+20200916 11:30:48.276 [[ WARN] MyParagFileRegistry [main]] parag dir p2a could not be initialized
+20200916 11:30:48.386 [[ INFO] MvivaParagHost [main]] Succesfully loaded modified offers validity
+
+json array in correct format
+[{"subscriber_offer_message":"app1channel offer","offer_start_date":"20200916114500","retailer_offer_message":"","treepath":"","optIn":0,"ticket_id":"21185201.21185201.21185201.1600236000000.1493.1578","offer_id":"1578","offer_name":"app1_chanoffer1","recurrence":0,"post_notification":0,"campaign_name":"app1_channel1","channels":[{"additionalInfo":{"msg":"app1channel offer","rb6_label":"","rb2_meta":"","rb7_meta":"","rb1_label":"","rb2_handle":"","rb3_handle":"","time-out":"-1","rb1_handle":"","rb4_label":"","rb4_handle":"","rb5_handle":"","rb2_label":"","rb6_handle":"","rb7_handle":"","rb3_meta":"","ec":"0","mask":"Default","rb6_meta":"","rb7_label":"","resource_bundles_in_use":"0","rb8_handle":"","rb5_label":"","rb1_meta":"","rb4_meta":"","rb5_meta":"","rb8_label":"","rb8_meta":"","validity":"15102020 000000","rb3_label":""},"channelName":"APP"}],"offer_end_date":"20201015000000","actions":[{"action_code":"recharge","params":[{"filter":"","name":"u_id","data_type":1,"value":"1"},{"filter":"","name":"recharge_r_id","data_type":1,"value":"1552"},{"filter":"","name":"recharge_amount","data_type":2,"value":"20.0"}]}],"campaign_id":"1493","order":-42},{"subscriber_offer_message":"subofferapp2","offer_start_date":"20200916114500","retailer_offer_message":"","treepath":"","optIn":0,"ticket_id":"21185201.21185201.21185201.1600236000000.1494.1579","offer_id":"1579","offer_name":"app1_chanoffer2","recurrence":0,"post_notification":0,"campaign_name":"app1_channel2","channels":[{"additionalInfo":{"msg":"subofferapp2","rb6_label":"","rb2_meta":"","rb7_meta":"","rb1_label":"","rb2_handle":"","rb3_handle":"","time-out":"-1","rb1_handle":"","rb4_label":"","rb4_handle":"","rb5_handle":"","rb2_label":"","rb6_handle":"","rb7_handle":"","rb3_meta":"","ec":"0","mask":"Default","rb6_meta":"","rb7_label":"","resource_bundles_in_use":"0","rb8_handle":"","rb5_label":"","rb1_meta":"","rb4_meta":"","rb5_meta":"","rb8_label":"","rb8_meta":"","validity":"15102020 000000","rb3_label":""},"channelName":"APP"}],"offer_end_date":"20201015000000","actions":[{"action_code":"product_store","params":[{"filter":"","name":"u_id","data_type":1,"value":"1"},{"filter":"","name":"product_store_product_code","data_type":3,"value":"7day_100min_Perday_VFT"},{"filter":"","name":"product_store_r_id","data_type":1,"value":"1553"}]}],"campaign_id":"1494","order":-42},{"subscriber_offer_message":"subscriber offer recharge 25","offer_start_date":"20200916114500","retailer_offer_message":"","treepath":"","optIn":0,"ticket_id":"21185201.21185201.21185201.1600236000000.1495.1580","offer_id":"1580","offer_name":"app1_chanoffer3","recurrence":0,"post_notification":0,"campaign_name":"app3_channel","channels":[{"additionalInfo":{"msg":"subscriber offer recharge 25","rb6_label":"","rb2_meta":"","rb7_meta":"","rb1_label":"","rb2_handle":"","rb3_handle":"","time-out":"-1","rb1_handle":"","rb4_label":"","rb4_handle":"","rb5_handle":"","rb2_label":"","rb6_handle":"","rb7_handle":"","rb3_meta":"","ec":"0","mask":"Default","rb6_meta":"","rb7_label":"","resource_bundles_in_use":"0","rb8_handle":"","rb5_label":"","rb1_meta":"","rb4_meta":"","rb5_meta":"","rb8_label":"","rb8_meta":"","validity":"15102020 000000","rb3_label":""},"channelName":"APP"}],"offer_end_date":"20201015000000","actions":[{"action_code":"recharge","params":[{"filter":"","name":"u_id","data_type":1,"value":"1"},{"filter":"","name":"recharge_amount","data_type":2,"value":"25.0"},{"filter":"","name":"recharge_r_id","data_type":1,"value":"1554"}]}],"campaign_id":"1495","order":-42}]
+
+
+
+
+20200916 13:37:33.572 [http-bio-8105-exec-9] FATAL com.kivar.lumina.core.campaigns.fulfilment.guidance.deploy.PartitionFunctionLoader - mViva-GE-012005:Error occurred while loading the fulfillment partition function.
+	Please look at debug logs for more information.
+
+java.lang.NullPointerException
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.kivar.lumina.core.campaigns.fulfilment.guidance.deploy.PartitionFunctionLoader.loadFunction(PartitionFunctionLoader.java:15)
+	at com.kivar.lumina.core.campaigns.reminder.realtime.fulfilmentquery.interfaces.SimpleFulfillmentQueryGateway.getPartitionFunction(SimpleFulfillmentQueryGateway.java:159)
+	at com.kivar.lumina.core.campaigns.reminder.realtime.fulfilmentquery.interfaces.SimpleFulfillmentQueryGateway.<init>(SimpleFulfillmentQueryGateway.java:75)
+	at com.kivar.lumina.server.segment.customerinfo.ng.CustomerInfoAPIRegistry.createSubscriberCustomerInfo(CustomerInfoAPIRegistry.java:91)
+	at com.kivar.lumina.server.segment.customerinfo.ng.CustomerInfoAPIRegistry.createAPI(CustomerInfoAPIRegistry.java:71)
+	at com.kivar.lumina.server.segment.customerinfo.ng.CustomerInfoAPIRegistry.getAPI(CustomerInfoAPIRegistry.java:60)
+	at com.kivar.lumina.server.segment.CustomerInfoDataFetcherQuad.getCustInfoForQuad(CustomerInfoDataFetcherQuad.java:87)
+	at com.kivar.lumina.server.segment.SegmentConfiguration.getCustomerInfoForQuad(SegmentConfiguration.java:2187)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.web.bindery.requestfactory.server.ReflectiveServiceLayer.invoke(ReflectiveServiceLayer.java:178)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.invoke(ServiceLayerDecorator.java:111)
+	at com.google.web.bindery.requestfactory.server.ServiceLayerDecorator.invoke(ServiceLayerDecorator.java:111)
+	at com.google.web.bindery.requestfactory.server.SimpleRequestProcessor.processInvocationMessages(SimpleRequestProcessor.java:463)
+	at com.google.web.bindery.requestfactory.server.SimpleRequestProcessor.process(SimpleRequestProcessor.java:233)
+	at com.google.web.bindery.requestfactory.server.SimpleRequestProcessor.process(SimpleRequestProcessor.java:135)
+	at com.google.web.bindery.requestfactory.server.RequestFactoryServlet.doPost(RequestFactoryServlet.java:135)
+	at com.kivar.lumina.server.LuminaRequestFactoryServlet.doPost(LuminaRequestFactoryServlet.java:100)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:650)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.kivar.lumina.server.security.filters.XSRFTokenValidationFilter.doFilter(XSRFTokenValidationFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.kivar.lumina.server.security.filters.SessionValidationFilter.doFilter(SessionValidationFilter.java:140)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.kivar.lumina.server.security.filters.AnotherLicenseValidationFilter.doFilter(AnotherLicenseValidationFilter.java:71)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:218)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:506)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:962)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1115)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Sep 16, 2020 1:37:33 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8105"]
+Sep 16, 2020 1:37:33 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Sep 16, 2020 1:37:33 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Sep 16, 2020 1:37:33 PM org.apache.catalina.core.StandardWrapper unload
+
+
+quad_level=1&container_type=1&owner=8801100000301&fetch_depth=0
+String rawQuadLevel = params.get( tagQuadLevel );
+		String rawContainerType = params.get( tagContainerType );
+
+		String ticketId = params.get( tagTicketId );
+		String msisdn = params.get( tagOwner );
+logger.debug( "Received request for owner: " + msisdn + "with ticket id : " + ticketId + "and quad level :" + rawQuadLevel + "container type :" + rawContainerType + " from pelatro_quad_provision API" );
+Integer quadLevel = SUBSCRIBER;
+
+localhost:9800/pelatro_provision?id=317043.217043.117043.1600108200000.44146.55217&msisdn=999000043
+
+quad provison api
+pelatro_quad_provision?owner=999000043&id=317043.217043.117043.1600108200000.44146.55217&quad_level=3&container_type=3
+
+quad offers pull api
+localhost:9800/pelatro_quad_rsa?quad_level=3&container_type=3&owner=&999000043fetch_depth=0
