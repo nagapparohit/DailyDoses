@@ -23,5 +23,11 @@ u Sep 17 00:00:00 IST 2020
 rohit@rohit:~/scripts$ cat profile_gen.sh 
 hadoop jar /home/rohit/jars/profiling-5.1.0.6.jar com.kivar.lumina.core.mapreduce.deploy.SMARTScheduledProfileGeneratorMain $1 "$2"000 /home/rohit/product_configs/config/job_configs/sub_data_load2.properties
 
+rohit@rohit:~/scripts$ cat profile_reader.sh 
+java -Dlog4j.configurationFile=/home/rohit/jars/hibernate/log4j2.xml -cp ':/home/rohit/jars/hibernate:/home/rohit/jars/*:/home/rohit/jars/hibernate/log4j2.xml' com.kivar.lumina.encodedprofilereader.QuadProfileReaderMain "$1" /home/rohit/product_configs/config/job_configs/sub_data_load.properties
+rohit@rohit:~/scripts$ 
+
+
+
  
 
