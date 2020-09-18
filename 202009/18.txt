@@ -1,0 +1,7 @@
+update jira ticke 1422 dialog dnd message anisha change --> moved to verified state
+
+A.	DND option will be provided to select the DND Message during SMS offer configurations. 
+B.	DND messages should be configurable and new DND messages can be added
+C.	DND message will vary based on the language selection for offer message configuration. Currently dialog supports SMS in English, Sinhala and Tamil language and separate DND configuration should be made available for 3 languages. 
+D.	No DND message will be appended if subscriber doesn’t select any option(Default option)
+E.	Message length will be shown including DND message 
