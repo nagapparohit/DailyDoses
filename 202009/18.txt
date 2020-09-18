@@ -4,4 +4,22 @@ A.	DND option will be provided to select the DND Message during SMS offer config
 B.	DND messages should be configurable and new DND messages can be added
 C.	DND message will vary based on the language selection for offer message configuration. Currently dialog supports SMS in English, Sinhala and Tamil language and separate DND configuration should be made available for 3 languages. 
 D.	No DND message will be appended if subscriber doesn’t select any option(Default option)
-E.	Message length will be shown including DND message 
+E.	Message length will be shown including DND message
+
+
+MC-1457 --> cRM issue  need to check in dialog
+
+function t(){
+if [[ -z "$ORIG" ]]; then
+ORIG=$PS1
+fi
+TITLE="\[\e]2;$*\a\]"
+PS1=${ORIG}${TITLE}
+}
+
+NuKgP9upG7fE65Zf8DUxLA==
+
+1=/home/rohit/product_configs/config/common/common_configs.properties,/home/rohit/product_configs/config/common/client_hibernate_config.properties,/home/rohit/product_configs/config/entity_specific/sub_configs.properties,/home/rohit/product_configs/config/config_sub/naksha-config.properties,/home/rohit/product_configs/config/common/imei.properties,/home/rohit/product_configs/config/common/campaign-config.properties
+2=/home/rohit/product_configs/config/common/common_configs.properties,/home/rohit/product_configs/config/common/client_hibernate_config.properties,/home/rohit/product_configs/config/entity_specific/ret_configs.properties,/home/rohit/product_configs/config/config_sub/naksha-config.properties,/home/rohit/product_configs/config/common/imei.properties
+
+inwi have to release it today -->

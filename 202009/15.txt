@@ -11,6 +11,11 @@ need to check anisha ticket 5.0.1 re build issue dnd msg update in client
 
 1475 --> vijay commented something need to take check this
 
+insert into source_type  values (1835,'DND Message',1,0,1);
+
+insert into configuration_details values (1049,1049,1835,1,'None','',null,0,1,'2020-09-03 10:01:03.403',1,1,'2020-09-03 10:01:03.403',1);
+
+
 DB seeding for block list msg
 insert into source_type  values (1835,'DND Message',1,0,1);
 
@@ -19,8 +24,7 @@ insert into configuration_details values (1049,1049,1835,1,'None','',null,0,1,'2
 i was already having 1049 so i replaced it with below
 insert into configuration_details values (2687,2687,1835,1,'None','',null,0,1,'2020-09-03 10:01:03.403',1,1,'2020-09-03 10:01:03.403',1);
 
-
-update configuration_details  set is_default=1 where id =2689
+update configuration_details  set is_default=1 where id=2689
 
 insert into configuration_details values (1049,1049,1835,1,'None','',null,0,1,'2020-09-03 10:01:03.403',1,1,'2020-09-03 10:01:03.403',1);
 

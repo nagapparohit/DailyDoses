@@ -25,8 +25,42 @@ hadoop jar /home/rohit/jars/profiling-5.1.0.6.jar com.kivar.lumina.core.mapreduc
 
 rohit@rohit:~/scripts$ cat profile_reader.sh 
 java -Dlog4j.configurationFile=/home/rohit/jars/hibernate/log4j2.xml -cp ':/home/rohit/jars/hibernate:/home/rohit/jars/*:/home/rohit/jars/hibernate/log4j2.xml' com.kivar.lumina.encodedprofilereader.QuadProfileReaderMain "$1" /home/rohit/product_configs/config/job_configs/sub_data_load.properties
-rohit@rohit:~/scripts$ 
+rohit@rohit:~/scripts$
 
+
+map con 8192=8 gb
+red con 10240=10 GB
+
+<property>
+  <name>mapreduce.map.memory.mb</name>
+  <value></value>
+</property>
+<property>
+  <name>mapreduce.reduce.memory.mb</name>
+  <value></value>
+</property>
+
+
+
+<property>
+  <name>mapreduce.map.java.opts</name>
+  <value>-Xmx1638m</value>
+</property>
+<property>
+  <name>mapreduce.reduce.java.opts</name>
+  <value>-Xmx3278m</value>
+</property>
+
+
+mapreduce.map.java.opts,
+<property>
+  <name>mapreduce.map.java.opts</name>
+  <value></value>
+</property>
+<property>
+  <name>mapreduce.reduce.java.opts</name>
+  <value></value>
+</property>
 
 
  
