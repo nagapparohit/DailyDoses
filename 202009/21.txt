@@ -1,0 +1,50 @@
+primtel issue to check why in profile generation for 500 is not getting computed 
+
+MC-1433 --> SUrvey GUI improvements
+MC-1457 --> crm rsa api response is not coming when apply with channel name filter
+
+Survey ID column in offers table is used in Core to fetch the channel of a particular survey during OG. But survey ID is saved in offers table only when Survey is selected as an option in Types Page
+
+
+1.CASE1: In Types page of survey is selected that time the survey id will be captured in offers table.
+
+2.CASE2: In Offers page if Survey is selected as a reward, Survey id is saved in the reward parameter's expression table against 'survey_id' parameter.
+Back-end (CORE) should support both the conditions, CASE1 AND CASE2.
+If survey id found in offers table  {
+fetch the survey id using the offer id.
+QUERY: (Select survey_id from offers where id = offerID);
+}  
+Else If survey id is NULL in offers table then 
+Go to that offer's reward parameters and fetch the survey id using the below query.
+QUERY: select * from survey where id in (select CAST(value AS NUMERIC(10)) from expression_tokens where offer_expression_id in(select id from offer_expressions where id in (select expression_parameter_id from reward_parameters where code ='survey_id' and offer_reward_id in (select id from offer_rewards where reward_bag_id in (select id from  offer_reward_bag where act_rew_id  in (select id from offer_action_rewards where action_reward_bag_id in (select action_reward_bag from offers where id = 2230)))))));
+3.Support for multiple survey rewards when configured in client.(If Applicable) To select the channel from each survey. - Need to disable from GUI……(Make it configurable to add or not multiple rewards
+
+
+
+
+
+update campn_exec_type set visibility = null where name ='Survey'; 
+update offer_reward_dfn set allow_multiple_times = 0 where code ='survey'; 
+
+
+alter table cg_tg_group add refresh_interval_days numeric(10,0);
+
+create table cg_refresh_meta_info (
+id numeric(10,0) primary key,
+camp_id numeric(10,0),
+run_id character varying(100) not null,
+run_context numeric(20,0),
+gen_time numeric(20,0),
+valid_from numeric(20,0),
+valid_until numeric(20,0)
+);
+
+CREATE SEQUENCE cg_refresh_meta_info_seq INCREMENT by 1 MINVALUE 1 MAXVALUE 9223372036854775807 START with 1024 CACHE 10;
+
+
+
+* Survey_template table is versioned entity survey is not versioned entity. 
+alter table survey  drop column is_active;
+
+5)For Survey save Msg =”Survey saved successfully”. For Quiz save Msg =”Quiz saved successfully”
+
