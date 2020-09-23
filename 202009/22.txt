@@ -1,0 +1,38 @@
+insert into row_types values (500,'survey',500);
+insert into ds_entity_key_posn values(500,500,1,2);
+insert into data_sources VALUES (500,'survey',null,500);
+insert into data_source_configurations VALUES (50001,'Row Type',500,1,1,'0',1,null,0,null,null);
+insert into data_source_configurations VALUES (50002,'Entity Id',500,3,2,'entity_id',3,null,0,null,null);
+insert into data_source_configurations VALUES (50003,'Ticket Id',500,3,3,'t_id',3,null,0,null,null);
+insert into data_source_configurations VALUES (50004,'Survey Id',500,1,4,'survey_id',1,null,0,null,null);
+insert into data_source_configurations VALUES (50005,'Container Id',500,1,5,'coid',1,null,0,null,null);
+
+
+
+Did you try MC-1572  ncell site issue
+
+MC-1433 ---> GUI changes ncell site
+
+
+MC-1433 --> verified  , ncell issue reprodueed on local
+rohit@rohit:~/logs$ grep -ai "Requesting to instantiate survey for subId" survey.out  | wc -l
+4280
+rohit@rohit:~/logs$ cd ../product_configs/survey_store/
+rohit@rohit:~/product_configs/survey_store$ cat survey_engine1_16007* | wc -l
+cat: 'survey_engine1_16007*': No such file or directory
+0
+rohit@rohit:~/product_configs/survey_store$ cd completed/
+rohit@rohit:~/product_configs/survey_store/completed$ 
+rohit@rohit:~/product_configs/survey_store/completed$ cat survey_engine1_16007* | wc -l
+200001
+rohit@rohit:~/product_configs/survey_store/completed$ cd
+rohit@rohit:~$ kill_survey.sh 
+Killing SurveyorMain process
+
+
+3)BU support for survey.=>(SurveyTemplate & While saving campaigns only specific survey related to BU should be shown)
+
+
+"CampaignPriorityComputer"
+this
+
