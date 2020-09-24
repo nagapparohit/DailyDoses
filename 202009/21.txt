@@ -5,6 +5,7 @@ MC-1457 --> crm rsa api response is not coming when apply with channel name filt
 
 Survey ID column in offers table is used in Core to fetch the channel of a particular survey during OG. But survey ID is saved in offers table only when Survey is selected as an option in Types Page
 
+"1600761886000";"_Run_ID_1600761886000"
 
 1.CASE1: In Types page of survey is selected that time the survey id will be captured in offers table.
 
@@ -27,7 +28,7 @@ update campn_exec_type set visibility = null where name ='Survey';
 update offer_reward_dfn set allow_multiple_times = 0 where code ='survey'; 
 
 
-alter table cg_tg_group add refresh_interval_days numeric(10,0);
+alter table cg_tg_group add refresh_interval numeric(10,0);
 
 create table cg_refresh_meta_info (
 id numeric(10,0) primary key,

@@ -1,0 +1,43 @@
+need to check ncell issue in local with new campaigns jar
+
+vinaphone delay issue need to check with sharath and anisha
+
+"a,b,c".split(",",-1);
+
+17050
+"9779828043579"
+
+localhost:9800/pelatro_provision?id=317043.217043.117043.1600108200000.44146.55217&msisdn=999000043
+
+quad provison api
+pelatro_quad_provision?owner=999000043&id=317043.217043.117043.1600108200000.44146.55217&quad_level=3&container_type=3
+
+quad offers pull api
+localhost:9800/pelatro_quad_rsa?quad_level=3&container_type=3&owner=&999000043fetch_depth=0
+
+localhost:9800/pelatro_quad_rsa?quad_level=3&container_type=3&owner=999000043&fetch_depth=0
+
+
+AuthorizedToken
+Basic U3VuaWw6U0s=
+
+NCELL URLS
+http://10.74.2.109:9001/pelatro_provision?msisdn=9779800012922&id=21185201.21185201.21185201.1599416100000.4224.6012
+
+http://10.74.2.109:9001/pelatro_rsa?msisdn=9779800012922&fetch_depth=1
+
+
+
+	Please look at debug logs for more information.
+
+20200923 19:04:16.893 [[ERROR] SimpleStringToRecordConverter [Thread-43]] Record passed ---> 54||9223372036854775807||17050||17050||17050||20200923 000000||[{"value":"17050.17050.17050.1600799400000.2203.2375","tag":"105","data_type":3}]
+20200923 19:04:16.893 [[DEBUG] SimpleStringToRecordConverter [Thread-43]] java.lang.IndexOutOfBoundsException: Index: 5, Size: 5
+java.lang.IndexOutOfBoundsException: Index: 5, Size: 5
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.kivar.lumina.core.campaigns.fulfilment.SimpleAlphaRecordConverter.convert(SimpleAlphaRecordConverter.java:46)
+	at com.kivar.lumina.core.campaigns.fulfilment.SimpleAlphaRecordConverter.convert(SimpleAlphaRecordConverter.java:21)
+	at com.kivar.lumina.core.campaigns.fulfilment.helpers.RecordGenenationWarpper.getRecord(RecordGenenationWarpper.java:30)
+	at com.kivar.lumina.core.campaigns.fulfilment.guidance.recordsource.socket.TCPSocketRecordIterator$CommunicationHandler.run(TCPSocketRecordIterator.java:180)
+
+

@@ -1,0 +1,36 @@
+
+hadoop jar /home/anishar/jars/sampler-omega6.0.jar com.kivar.lumina.campaigns.offergeneration.deploy.ScheduledOfferGenerationMain _Run_ID_"$context"000 "$context"000 /home/anishar/product_configs/config/job_configs/sub_offer_generation.properties 1 include=["$1"]
+
+hadoop jar /home/rohit/jars/sampler-5.1.jar com.kivar.lumina.campaigns.offergeneration.deploy.ScheduledOfferGenerationMain _Run_ID_"$context"000 "$context"000 /home/rohit/product_configs/config/job_configs/sub_offer_generation.properties 1 include=["$1"]
+
+
+
+insert into data_source_configurations values (5406,'Customer ID',54,3,3,'92',3,'',null,'');
+
+insert into data_source_configurations values (5407,'Account ID',54,3,4,'93',3,'',null,'');
+
+update data_source_configurations set position=7 where id=5405
+
+spring boot
+its own server , how do change port number
+ember serveer
+jetty server on spring cole wiht 
+probelm with JPA reposity (somethin we cannot acies)
+Junit for unit test cases
+spring annotation (conroller,reportsotry,reque,post,)
+difference request entity and reposnse body is just json , body is with headers
+
+object mapper serveicei 
+
+underlyng technoly
+jackson lib class (json)(internally)
+
+spring boot dependnies(projects)
+
+spring boot to DB connection  (how can we achiecver)
+
+micro serviceer archtecure 
+
+java 1.8 features lamdab expresion , streams api
+
+
