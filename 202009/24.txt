@@ -34,3 +34,18 @@ micro serviceer archtecure
 java 1.8 features lamdab expresion , streams api
 
 
+naksh_enti_map
+
+primetel
+
+client war file:
+http://192.168.5.94:8080/jenkins/view/primetel/job/primetel_5.1.0.6_client/ws/client/client/target/
+
+core/extras jars:
+http://192.168.5.94:8080/jenkins/view/primetel/job/primetel_5.1.0.6_server/ws/core/build/allLibs/
+http://192.168.5.94:8080/jenkins/view/primetel/job/primetel_5.1.0.6_server/ws/extras/build/allLibs/
+
+fat jars:
+http://192.168.5.94:8080/jenkins/view/primetel/job/primetel_5.1.0.6_server/ws/core/build/runnable/
+http://192.168.5.94:8080/jenkins/view/primetel/job/primetel_5.1.0.6_server/ws/extras/build/runnable
+

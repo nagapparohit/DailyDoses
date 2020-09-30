@@ -1,0 +1,19 @@
+sudo apt-add-repository ppa:fixnix/netspeed 
+sudo apt-get update 
+sudo apt-get install indicator-netspeed-unity
+
+hadoop jar /home/rohit/jars/sampler-5.1.0.4.jar com.kivar.lumina.campaigns.offergeneration.deploy.ScheduledOfferGenerationMain _Run_ID_"$context"000 "$context"000 /home/rohit/product_configs/config/job_configs/sub_offer_generation.properties 1 include=["$1"]
+
+offer_messages__Run_ID_1601032075000_1-r-00000
+
+/gfs-processing/extractor/offer/messages//offer/
+offer_messages__RUN_ID_1_1600779164000__1
+
+offer_messages__RUN_ID_1_1600779164000__1-r-00000
+
+
+1529 and 1577 didn't checked them yet
+
+MC-->1593 Inprogress --> local its working fine in site issue is there
+MC-->1529 Inprogress 
+MC-->1577 Inprogress

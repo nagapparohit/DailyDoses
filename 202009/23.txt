@@ -41,3 +41,5 @@ java.lang.IndexOutOfBoundsException: Index: 5, Size: 5
 	at com.kivar.lumina.core.campaigns.fulfilment.guidance.recordsource.socket.TCPSocketRecordIterator$CommunicationHandler.run(TCPSocketRecordIterator.java:180)
 
 
+54||9223372036854775807||17050||17050||17050||20200923 000000||[{"value":"17050.17050.17050.1600799400000.2203.2375","tag":"105","data_type":3}]
+

@@ -1,0 +1,131 @@
+packages and services issue 1577 
+
+delay in offer gen 1529
+
+1593 --> fixed need to check
+
+1577 --> issue db
+select * from data_source_configurations where data_source_id=5 order by position
+
+
+
+select * from packages_services_fields;
+
+select * from profile_fields where name ilike '%package%';
+
+select * from pkgs_srvs_functions
+
+select * from profile_fields_mapping  where profile_fields_id in (999006,999007,999008);
+
+select * from type3_key_ref_data
+
+select * from operators where id in  (17,37);
+
+select * from containers_pfs_mapping  where pf_id  in (999006,999007,999008);
+
+select * from pkgs_srvs_data_sources;
+
+select * from entity_kgs_srvs_ds_mappings;
+
+cat profile_milestonesName.txt3:ps:8:DF:0
+
+select id, group_name from pf_schedule_groups where profile_ids like '%999006%' and profile_ids like '%999007%' and profile_ids like  '%999008%';
+
+
+
+
+packages and services issues faced:
+
+1) row_types id in row_type table was different from data_sources mentioned id in data_sources table for packages and services
+2) container_pfs_mapping did not have any entry due to which it was not vivible in GUI
+3) packages_services_fields table did not have entry in package_id, start_date and end_date fields (respective ids from data_source_configuration table)
+	due to which insight was throwing error and was not showing the result
+
+Possible issues:
+	read out time of inisght should be high as packages and services takes more time to process
+**********************************************************************************************************	
+Create tables mentioned in packages and services file
+Update sub config file  
+
+Below mentioned ids are tags or ids in data_source_configurations table
+(cpid_tag_dsc is uid for packages and services source)
+#package_and_service_cpid_tag_dsc=0
+package_and_service_cpid_tag_dsc=3003002
+i have below instead of above 100234
+#package_and_service_cpid_tag_dsc=3003002
+
+# Comma seperated data_sources ids for packages_and_services
+#package_and_service_interested_ds=113
+package_and_service_interested_ds=3003
+i have below instead of above
+#package_and_service_interested_ds=113
+
+# The tags and their data types which are to be considered
+#package_and_service_interested_tags_and_dtypes=0:1
+package_and_service_interested_tags_and_dtypes=0:1,1:3,3003007:1,3003005:3,3003006:3,3003008:4,3003009:4,7:4,cpid:3
+below is used insterad of above
+#package_and_service_interested_tags_and_dtypes=0:1,uid:3,1:3,2:3,3:3,4:3,5:4,6:4,7:4,8:3,9:3,10:3,11:3,cpid:3
+
+(adaptor output path of packages and services adaptor (taken from event source)
+# Packages and services Folder path
+packages_and_services_folder_path=../../gfs-mViva/gfs-processing1/adaptor-output/input-feed/package_services/
+#below i'm using in my config
+packages_and_services_folder_path=/packages_and_services
+
+add profile fields to pf_schedule_group and run pg
+read profile reader as ps:8
+8 is raw data type where packages and services is stored as bytes.
+
+Add ps:8:DF:0 to profile_milestone file 
+run seed_pd
+run insight
+***************************************************************************************************
+
+
+
+added in my vinaphone db
+insert into operators(id,operator_name,operator_type_id,internal_id,symbol,visibility) values (37,'Not contains',5,37,'not contains','');
+
+
+421;"Packages"
+420;"Packages And Services"
+419;"Subscribed"
+418;"Expired"
+416;"Active"
+415;"Services"
+i have above id's in my tables of below
+insert into profile_field_groups(id,name) values (403,'Services');
+insert into profile_field_groups(id,name) values (404,'Active');
+insert into profile_field_groups(id,name) values (405,'Expired');
+insert into profile_field_groups(id,name) values (406,'Subscribed');
+insert into profile_field_groups(id,name) values (407,'Packages And Services');
+insert into profile_field_groups(id,name) values (408,'Packages');
+
+
+
+INSERT INTO row_types VALUES (44,'packages_and_services',113)
+i have above id's in my tables of below
+INSERT INTO row_types VALUES (41,'packages_and_services',113);
+
+delete from data_source_configurations  where id in (100234,3003140,3003141,3003142)
+below 4 id's i'm going to delete from my db
+100234;"Contract PID";113;3;11;"cpid";3;"";0;"";
+3003140;"Product ID";113;1;12;"110";1;"";;"";
+3003141;"Customer Id";113;3;13;"c";3;"";;"";
+3003142;"Account Id";113;3;14;"ac";3;"";;"";
+
+INSERT INTO data_source_configurations (id,name,data_source_id,data_type_id,position,tag_name,formatter_type_id,visibility) VALUES (100230,'Agent Name',113,3,11,'9',3,'');
+INSERT INTO data_source_configurations (id,name,data_source_id,data_type_id,position,tag_name,formatter_type_id,visibility) VALUES (100231,'Branch Name',113,3,12,'10',3,'');
+INSERT INTO data_source_configurations (id,name,data_source_id,data_type_id,position,tag_name,formatter_type_id,visibility) VALUES (100232,'Branch Code',113,3,13,'11',3,'');
+INSERT INTO data_source_configurations (id,name,data_source_id,data_type_id,position,tag_name,formatter_type_id,visibility) VALUES (100234,'Contract PID',113,3,14,'cpid',3,'');
+
+1000;"1,2,3,5"
+old pf in 2.
+1072,1073,1074,1075,1076,1077,1078,1079,1081,1082,1083,1084,
+
+
+
+
+
+
+
