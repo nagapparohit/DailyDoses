@@ -1,1 +1,13 @@
 have to give KT on cube gen and profile gen
+
+packages and services
+
+1537 --> data visiblity in gui shubham is doing need to release todya
+
+1290 --> iniwi alreaday tested need to release it today --> done
+
+one clecom ticket is there need to talk with harsha for a release
+1493 --> to release --> done
+
+
+need to talk on MC-861
