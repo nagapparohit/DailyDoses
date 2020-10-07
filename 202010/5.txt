@@ -1,0 +1,20 @@
+
+    • Service Type :
+It has different services such as voice, data,sms, mms, etc [Basically mapped with source id]
+    • Record Type:
+It includes (incoming, outgoing, etc…)
+    • Call Type:
+it includes onnet, offnet, etc…
+    • Peak/Off-Peak:
+
+    These Dimentiones are crossed across the below points to get the corresponding data to be stored in cube:
+    1) Count
+    2) Total Spend
+    3) Duration
+    4) Upload Volume
+    5) Download Volume
+    6) Total Volume
+
+
+1571 --> spooler job smart
+

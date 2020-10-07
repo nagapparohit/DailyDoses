@@ -9,5 +9,10 @@ packages and services
 one clecom ticket is there need to talk with harsha for a release
 1493 --> to release --> done
 
+package and servives in vinaphone
+
+MC-1493 --> released
+MC-1290 --> released
+MC-1537 --> released
 
 need to talk on MC-861
