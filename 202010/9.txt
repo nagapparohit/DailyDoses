@@ -1,0 +1,3 @@
+ncell loading
+
+ for i in {527187..10000000} ;do  cat ncellloadCreate | awk -F, -v var=$i 'BEGIN{OFS=","}{print $1,var,var"99000",$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,var,var,$17,$18,$19}' ; done > ncell10million_2new.txt

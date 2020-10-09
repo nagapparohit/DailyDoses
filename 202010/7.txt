@@ -13,9 +13,8 @@ http://192.168.5.94:8080/jenkins/view/ncell_5.1/job/5.1_crm/ws/deploy/lib/
 1610 --> done
 1611 --> done
 1571 --> done
-1494 --> done with local db its workign , have to test with site db once
+1494 --> done
 1600 --> open state (not picked)
-1617 --> (inprogress) dialog Offer is available for OPTIN even after it is accepted(for Web channel)
+1617 --> inprogres
 1529 --> (inprogress ) its related to delay which happening in offer gen , anisha gave fix but still delay is there it is specific to one camp
 1577 -->  (inprogress ) pf config need to change told sharath
-Ncell store campaign retailer issue working fine in site

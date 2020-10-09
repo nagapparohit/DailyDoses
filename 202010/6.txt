@@ -1,6 +1,8 @@
+1610 --> done
+1611 --> done
+1571 --> done
 1494 --> with local db its workign , have to test with site db once
-1571 --> spooler jar reporended in progress
 1600 --> not picked
 1529 --> (inprogress ) its related to delay which happening in offer gen , anisha gave fix but still delay is there it is specific to one camp
-1577 -->  (inprogress ) while reading profile its coming fine now , in ticket only pf reader is there , in insights values r not coming that have to see
+1577 -->  (inprogress ) pf config need to change told sharath
 Ncell store campaign retailer issue working fine in site
