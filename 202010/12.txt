@@ -1,0 +1,57 @@
+1610 --> done --> close
+1611 --> done --> close
+1571 --> done --> verfied
+1494 --> done --> verfied
+
+by changin offer is its not acceptign rquest
+
+by changing camp if its doing provosison
+
+
+1600 --> (smart)open state (not picked)
+1617 --> (dialog)inprogres
+
+MC--> 1618--> (ncelll trigger campaign)
+1529 --> (vinaphone)(inprogress ) its related to delay which happening in offer gen , anisha gave fix but still delay is there it is specific to one camp
+1577 --> (vinaphone) (inprogress ) pf config need to change told sharath
+
+1518 --> (smart)harsha assigned smart new action requirement	
+
+
+
+insert into offer_action_dfn values(35,'Optin','optin',14,36,'show','99191930');
+
+insert into action_param_dfn values(132,35,'Identifier','u_id',1,'Idenitifier',1,0,0,1,'1',null,1,null,null);
+
+insert into action_param_dfn values(133,35,'Message','optin_r_id',1,'Message',2,0,0,1,'XXX',null,1,null,null);
+
+insert into action_param_dfn values(134,35,'Filter','optin_f_id',1,'Filter',3,0,0,1,'XXX',null,1,null,null)
+
+insert into offer_action_dfn_mapping values(38,35,1);
+
+insert into profile_field_groups values (99191930,'Optin');
+
+insert into customer_info_enabled_actions values(7,'Optin','optin',1,1);
+
+
+            "optin":{
+
+                    "classname":"com.kivar.lumina.core.campaigns.fulfilment.actionmonitors.GenericActionMonitor",
+
+                    "parameters":["optin"],
+
+                    "datatypes":["java.lang.String"]
+
+                    }
+
+
+
+
+1600 --> (smart)open state (not picked)
+1617 --> (dialog)inprogres
+
+MC--> 1618--> (ncelll trigger campaign)
+1529 --> (vinaphone)(inprogress ) its related to delay which happening in offer gen , anisha gave fix but still delay is there it is specific to one camp
+1577 --> (vinaphone) (inprogress ) pf config need to change told sharath
+
+1518 --> (smart) msg extraction for app channel is not happening

@@ -1,0 +1,2 @@
+~/softwares/apache-tomcat-7.0.77/webapps/client-1.0-SNAPSHOT/WEB-INF/classes/com/kivar/lumina/client/messages
+

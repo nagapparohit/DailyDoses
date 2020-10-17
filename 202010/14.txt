@@ -1,0 +1,121 @@
+
+in ticket
+Added Condition Done with Quota as well , to change the optin flag from 1 to 0.
+
+in confluence
+Optin status - if campaign will be expired/terminated/multliple action Or Offer is expired/Done with Quota then only it will be change to 0 from 1.
+
+
+
+config_sub/delivery_record_configs.properties:reward_record_summary_backup_path=/home/rohit/product_configs/reward_record_backup
+
+common/deliver_status.properties:reward_record_summary_backup_path=/home/rohit/product_configs/Deliver_Status/reward_record_bkp
+
+
+
+
+
+https://pelatro.atlassian.net/browse/MC-1506 --> to be done
+
+1494
+
+http://192.168.5.94:8080/jenkins/view/smart/job/site_smart_2.7_client/ws/client/client/target/
+
+
+
+20201014 17:43:16.496 [[TRACE] ClientCnxn [ParagDataLoader_3-SendThread(localhost:2181)]] SendThread exitedloop.
+20201014 17:43:16.611 [[ INFO] QuadProfileResultDecoderGateway [main]] Unable to read configuration max_entities_allowed_per_customer. Using default..
+20201014 17:43:16.611 [[DEBUG] QuadProfileResultDecoderGateway [main]] 
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542) ~[?:1.8.0_201]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[?:1.8.0_201]
+	at com.kivar.lumina.common.quad.decoder.profile.QuadProfileResultDecoderGateway.loadMaxEntitiesAllowed(QuadProfileResultDecoderGateway.java:229) [common-5.0.1.jar:?]
+	at com.kivar.lumina.common.quad.decoder.profile.QuadProfileResultDecoderGateway.<init>(QuadProfileResultDecoderGateway.java:69) [common-5.0.1.jar:?]
+	at com.kivar.lumina.common.quad.decoder.profile.CompressedQuadProfileResultDecoderGateway.<init>(CompressedQuadProfileResultDecoderGateway.java:13) [common-5.0.1.jar:?]
+	at com.kivar.mviva.paragliaison.processor.smart.ParagProcessorForProfile.process(ParagProcessorForProfile.java:100) [parag-liaison-5.0.1.jar:?]
+	at com.kivar.mviva.paragliaison.deploy.LiaisonOfficer.serializeAndPut(LiaisonOfficer.java:150) [parag-liaison-5.0.1.jar:?]
+	at com.kivar.mviva.paragliaison.deploy.LiaisonOfficer.main(LiaisonOfficer.java:82) [parag-liaison-5.0.1.jar:?]
+20201014 17:43:16.621 [[ INFO] QuadProfileResultDecoderGateway [main]] Max entities allowed for a given customer ---> 25000
+
+
+
+create tag in smart client today
+
+
+
+vijay
+
+
+in hbase we have status 5 
+
+
+protected int fetchStatus( Integer state, Map<String, StopResumeCampaignState> campaignStateMap, Date today, int campaignId ) {
+		StopResumeCampaignState stopResumeCampaignState = campaignStateMap.get( generateRunStateId( campaignId, "" ) );
+		if ( stopResumeCampaignState != null && ( stopResumeCampaignState.getActionType().intValue() == ActiveCampaignActions.TERMINATE.getType() || stopResumeCampaignState.getActionType().intValue() == ActiveCampaignActions.STOP.getType() ) ) {
+			if ( today.getTime() == stopResumeCampaignState.getEffectiveDate().longValue() || today.getTime() > stopResumeCampaignState.getEffectiveDate().longValue() ) {
+				return CRMOfferStates.Stopped.getOfferState();
+			}
+		}
+		if ( state == null ) {
+			logger.debug( "Bad offer state: " + state );
+			return -1;
+		}
+		if ( state.equals( OfferStates.ACCEPTED ) ) {
+			return CRMOfferStates.Accepted.getOfferState();
+		}
+		if ( state.equals( OfferStates.ACTIVE ) ) {
+			return CRMOfferStates.Active.getOfferState();
+		}
+		if ( state.equals( OfferStates.EXPIRED ) ) {
+			return CRMOfferStates.Expired.getOfferState();
+		}
+		if ( state.equals( OfferStates.DONE_WITH_THE_QUOTA ) ) {
+			return CRMOfferStates.Done_With_Quota.getOfferState();
+		}
+		logger.debug( "Bad offer state: " + state );
+		return -1;
+	}
+
+
+
+
+
+@DesignNotes( "Specifically made two states on same value , for better readability in other places used." )
+public final class OfferStates {
+
+	public static final int INVALID = -1;
+
+	public static final int DISPATCHED_FROM_CORE = 2;
+
+	public static final int INERT = 2;
+
+	public static final int ACTIVE = 1;
+
+	public static final int EXPIRED = 4;
+
+	public static final int ACCEPTED = 5;
+
+	public static final int DONE_WITH_THE_QUOTA = 6;
+
+	public static final int EXCLUDED = 7;
+
+}
+
+
+channels/crm/constants.java
+
+	public static enum CRMOfferStates {
+
+		Active( 0 ), Accepted( 1 ), Expired( 2 ), Stopped( 3 ), Excluded(
+				4 ), Done_With_Quota( 5 ), Expired_but_Accepted( 6 );
+
+		private final int value;
+
+		private CRMOfferStates( int value ) {
+			this.value = value;
+		}
+
+		public Integer getOfferState() {
+			return value;
+		}
+	};

@@ -1,0 +1,26 @@
+
+MC--> 1618--> (ncelll trigger campaign)
+1529 --> (vinaphone)(inprogress ) its related to delay which happening in offer gen , anisha gave fix but still delay is there it is specific to one camp
+1577 --> (vinaphone) (inprogress ) pf config need to change told sharath
+
+1518 --> (smart)harsha assigned smart new action requirement	
+
+
+"1602571295000";"_Run_ID_1602571295000"
+
+"9900000010"
+
+
+localhost:9800/pelatro_quad_rsa?quad_level=3&container_type=1&owner=9919900000001&fetch_depth=1&channel_name=sms&detail=1
+
+
+9919900000001
+317050.217050.117050.1602527400000.44154.55225
+
+
+1618 --> done
+1518 --> (smart) msg extraction for app channel is not happening (1662 (closed)linked issue, 1667 linked issue)
+1617 --> issue eixsit (linked issue 1675)
+1600 --> open state (not picked)
+1529 --> inprogress
+1577 --> inprogress
